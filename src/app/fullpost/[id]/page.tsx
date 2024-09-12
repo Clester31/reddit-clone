@@ -65,7 +65,7 @@ export default function PostPage() {
                 }
             </div>
             <div className="w-1/2 m-auto">
-                <InteractionTab post={post} loggedIn={loggedIn} />
+                <InteractionTab post={post}/>
             </div>
             <div className="w-1/2 m-auto mt-10">
                 <CommentSection post={post}/>

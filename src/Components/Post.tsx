@@ -9,7 +9,6 @@ interface PostProps {
 }
 
 export default function Post({ post }: PostProps) {
-    const { loggedIn } = useAppContext();
 
     return (
         <div className="my-2 w-full">
@@ -32,7 +31,7 @@ export default function Post({ post }: PostProps) {
                     </div>
                 )}
             </div>
-            <InteractionTab post={post} loggedIn={loggedIn}/>
+            <InteractionTab post={post}/>
         </div>
     );
 }

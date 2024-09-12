@@ -17,7 +17,7 @@ const li_style = 'hover:text-cyan-500 my-2'
 
 export default function Navbar() {
     const [display, setDisplay] = useState<boolean>(true);
-    const { currentUser } = useAppContext();
+    const { currentUser, loggedIn } = useAppContext();
 
     const clearLocalStorage = () => {
         localStorage.clear();
@@ -48,8 +48,8 @@ export default function Navbar() {
                                 </SignedIn>
                             </li>
                             <li className={li_style}><Link href={"/"}>Home</Link></li>
-                            <li className={li_style}><Link href={"/newpost"}>New Post</Link></li>
-                            <li className={li_style}><Link href={"/accinfo"}>Account Settings</Link></li>
+                            <SignedIn><li className={li_style}><Link href={"/newpost"}>New Post</Link></li></SignedIn>
+                            <SignedIn><li className={li_style}><Link href={"/accinfo"}>Account Settings</Link></li></SignedIn>
                             <li className={li_style} onClick={clearLocalStorage}>Clear Local Storage</li>
                         </>}
                 </ul>

@@ -16,7 +16,7 @@ export default function CommentSection({ post }: PostProps) {
         if (commentText.trim() === "") return;
         const newComment = { text: commentText, userName }; 
         updatePostComments(post.id, newComment);
-        setAllComments((prev) => [...prev, newComment]); 
+        setAllComments((prev: any) => [...prev, newComment]); 
         setCommentText("");
     };
 
