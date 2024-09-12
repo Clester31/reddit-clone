@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #27272a;
+    color: white;
+}
+
+li, i {
+    cursor: pointer;
+    transition: color 0.1s ease-in;
+}
